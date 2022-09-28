@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FriendsTown.Models.ActivityViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+   
+            <tr>
+                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Description)
+            </tr>
+            
+    
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { }) |
+                @Html.ActionLink("Details", "Details", new {  }) |
+                @Html.ActionLink("Delete", "Delete", new {  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
