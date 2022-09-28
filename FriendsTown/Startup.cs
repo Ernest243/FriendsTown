@@ -23,6 +23,8 @@ namespace FriendsTown
             FriendsTownContext contexto = new FriendsTownContext(options);
             contexto.Database.EnsureCreated();
 
+            // Options below is to use for MySQL Database Connection Setup
+
             //var options = new DbContextOptionsBuilder<FriendsTownContext>()
             //    .UseMySql(connection, ServerVersion.AutoDetect(connection))
             //    .Options;
