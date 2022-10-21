@@ -2,6 +2,7 @@
 using FriendsTown.Transversal;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace FriendsTown.Controllers
 {
@@ -120,6 +121,21 @@ namespace FriendsTown.Controllers
             return new ContentResult
             {
                 Content = "Email sent"
+            };
+        }
+
+        [HttpGet]
+        public ViewResult MultipleProducts() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ContentResult MultipleProducts(List<string> product) 
+        {
+            return new ContentResult
+            {
+                Content = string.Join("-", product)
             };
         }
     }
