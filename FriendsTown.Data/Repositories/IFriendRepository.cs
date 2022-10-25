@@ -9,5 +9,6 @@ namespace FriendsTown.Data
         IEnumerable<Friend> GetAll();
         Friend FindById(Guid id);
         void Add(Friend actividad);
+        IEnumerable<Friend> GetByName(string name);
     }
 }

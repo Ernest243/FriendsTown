@@ -9,5 +9,7 @@ namespace FriendsTown.Data
         IEnumerable<News> GetAll();
         News FindById(Guid id);
         void Add(News news);
+        void Update(News news);
+        void Delete(Guid id);
     }
 }
